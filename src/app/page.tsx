@@ -18,6 +18,9 @@ export default function Home() {
         <p className="text-xl text-muted-foreground">
           An AI Systems Framework
         </p>
+        <button className="button mt-4">
+          Get Started
+        </button>
       </div>
     </div>
   );

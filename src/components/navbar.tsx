@@ -10,14 +10,9 @@ import {
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-muted bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
-        <div className="mr-4">
-          <Link href="/" className="text-lg font-semibold text-foreground">
-            MeshX
-          </Link>
-        </div>
+      <div className="container flex h-14 items-center justify-center">
         <NavigationMenu>
-          <NavigationMenuList>
+          <NavigationMenuList className="space-x-2">
             <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -41,11 +36,6 @@ export function Navbar() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <div className="ml-auto">
-          <button className="button">
-            Get Started
-          </button>
-        </div>
       </div>
     </header>
   )
