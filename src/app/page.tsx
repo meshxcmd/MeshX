@@ -1,93 +1,116 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-navy text-white p-8">
-      <main className="max-w-4xl mx-auto">
-        <div className="space-y-16">
-          {/* Header */}
-          <div className="space-y-4">
-            <h1 className="text-5xl font-bold text-gradient">
-              MeshX Design System
-            </h1>
-            <p className="text-gray text-lg">
-              Elegant, modern, and deeply immersive design language
-            </p>
+    <div className="container py-8">
+      <main className="space-y-16">
+        {/* Header */}
+        <div className="space-y-6">
+          <Image
+            src="/mesh-x.svg"
+            alt="MeshX Logo"
+            width={180}
+            height={48}
+            className="mb-4"
+            priority
+          />
+          <h1 className="text-5xl font-bold text-gradient">
+            MeshX Design System
+          </h1>
+          <p className="text-muted-foreground text-lg">
+            Elegant, modern, and deeply immersive design language
+          </p>
+        </div>
+
+        {/* Color Palette */}
+        <section className="space-y-8">
+          <h2 className="text-3xl font-semibold text-primary">Color System</h2>
+          
+          {/* Primary Colors */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="card p-8">
+              <h3 className="font-medium mb-2">Primary</h3>
+              <div className="space-y-3">
+                <div className="h-10 bg-primary rounded-md" />
+                <p className="text-sm text-muted-foreground">Interactive elements and CTAs</p>
+              </div>
+            </div>
+            <div className="card p-8">
+              <h3 className="font-medium mb-2">Secondary</h3>
+              <div className="space-y-3">
+                <div className="h-10 bg-secondary rounded-md" />
+                <p className="text-sm text-muted-foreground">Supporting elements</p>
+              </div>
+            </div>
+            <div className="card p-8">
+              <h3 className="font-medium mb-2">Accent</h3>
+              <div className="space-y-3">
+                <div className="h-10 bg-accent rounded-md" />
+                <p className="text-sm text-muted-foreground">Highlights and emphasis</p>
+              </div>
+            </div>
           </div>
 
-          {/* Color Palette */}
-          <section className="space-y-8">
-            <h2 className="text-3xl font-semibold text-purple-bright">Color Palette</h2>
-            
-            {/* Primary Colors */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-purple-deep p-8 rounded-xl shadow-lg">
-                <h3 className="font-medium mb-2 text-purple-light">Deep Purple</h3>
-                <p className="text-sm text-purple-bright">#1E1E3F</p>
-                <p className="mt-4 text-sm text-gray/80">Primary backgrounds and elements</p>
-              </div>
-              <div className="bg-purple-bright p-8 rounded-xl shadow-lg">
-                <h3 className="font-medium mb-2">Bright Purple</h3>
-                <p className="text-sm text-purple-deep">#8A7CFF</p>
-                <p className="mt-4 text-sm text-purple-deep/80">Highlights and CTAs</p>
-              </div>
-              <div className="bg-purple-light p-8 rounded-xl shadow-lg">
-                <h3 className="font-medium mb-2 text-purple-deep">Light Lavender</h3>
-                <p className="text-sm text-purple-deep">#E6E1FF</p>
-                <p className="mt-4 text-sm text-purple-deep/80">Subtle accents and hovers</p>
+          {/* UI Elements */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="card p-8">
+              <h3 className="font-medium mb-2">Background</h3>
+              <div className="space-y-3">
+                <div className="h-10 bg-background border border-muted rounded-md" />
+                <p className="text-sm text-muted-foreground">Main background</p>
               </div>
             </div>
-
-            {/* Secondary Colors */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-navy border border-purple-deep/20 p-8 rounded-xl shadow-lg">
-                <h3 className="font-medium mb-2 text-purple-light">Dark Navy</h3>
-                <p className="text-sm text-purple-bright">#0D0D1F</p>
-                <p className="mt-4 text-sm text-gray/80">Deep backgrounds and contrast</p>
-              </div>
-              <div className="bg-gray p-8 rounded-xl shadow-lg">
-                <h3 className="font-medium mb-2 text-purple-deep">Cool Gray</h3>
-                <p className="text-sm text-purple-deep">#F5F5F8</p>
-                <p className="mt-4 text-sm text-purple-deep/80">Text and UI elements</p>
-              </div>
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="font-medium mb-2 text-purple-deep">White</h3>
-                <p className="text-sm text-purple-deep">#FFFFFF</p>
-                <p className="mt-4 text-sm text-purple-deep/80">High-contrast elements</p>
+            <div className="card p-8">
+              <h3 className="font-medium mb-2">Card</h3>
+              <div className="space-y-3">
+                <div className="h-10 bg-card border border-card-border rounded-md" />
+                <p className="text-sm text-muted-foreground">Card backgrounds</p>
               </div>
             </div>
-          </section>
+            <div className="card p-8">
+              <h3 className="font-medium mb-2">Muted</h3>
+              <div className="space-y-3">
+                <div className="h-10 bg-muted rounded-md" />
+                <p className="text-sm text-muted-foreground">Subtle elements</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-          {/* Example Components */}
-          <section className="space-y-8">
-            <h2 className="text-3xl font-semibold text-purple-bright">Component Examples</h2>
-            <div className="flex flex-wrap gap-4">
-              {/* Primary Button */}
-              <button className="bg-purple-bright px-8 py-3 rounded-lg hover:bg-purple-light hover:text-purple-deep transition-all duration-200">
-                Primary Action
-              </button>
-              {/* Secondary Button */}
-              <button className="bg-purple-deep px-8 py-3 rounded-lg hover:bg-purple-bright transition-all duration-200">
-                Secondary Action
-              </button>
-              {/* Text Button */}
-              <button className="text-purple-light hover:text-purple-bright transition-colors duration-200">
-                Text Action →
-              </button>
+        {/* Example Components */}
+        <section className="space-y-8">
+          <h2 className="text-3xl font-semibold text-primary">Components</h2>
+          <div className="space-y-6">
+            {/* Buttons */}
+            <div className="card p-8">
+              <h3 className="font-medium mb-4">Buttons</h3>
+              <div className="flex flex-wrap gap-4">
+                <button className="button">
+                  Primary Button
+                </button>
+                <button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-4 py-2 rounded-lg transition-colors">
+                  Secondary Button
+                </button>
+                <button className="text-accent hover:text-accent/90 transition-colors">
+                  Text Button →
+                </button>
+              </div>
             </div>
 
             {/* Card Example */}
-            <div className="bg-purple-deep p-6 rounded-xl shadow-lg space-y-4 max-w-md">
-              <h3 className="text-xl font-semibold text-purple-light">Feature Card</h3>
-              <p className="text-gray/90">
-                Example of how our colors can be used in a card component with proper contrast and visual hierarchy.
+            <div className="card p-6 max-w-md">
+              <h3 className="text-xl font-semibold mb-4">Feature Card</h3>
+              <p className="text-muted-foreground mb-4">
+                Example of how our colors create depth and visual hierarchy in components.
               </p>
-              <div className="pt-4 border-t border-purple-bright/20">
-                <button className="text-purple-bright hover:text-purple-light transition-colors">
+              <div className="pt-4 border-t border-card-border">
+                <button className="text-primary hover:text-primary-hover transition-colors">
                   Learn More →
                 </button>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
     </div>
   );

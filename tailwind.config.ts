@@ -9,16 +9,52 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        purple: {
-          deep: "#1E1E3F",
-          bright: "#8A7CFF",
-          light: "#E6E1FF"
+        // Base colors
+        background: "#09090B",
+        foreground: "#FFFFFF",
+        
+        // Primary accents
+        primary: {
+          DEFAULT: "#9B79FF",
+          foreground: "#FFFFFF",
+          hover: "#AF94FF",
         },
-        navy: "#0D0D1F",
-        gray: "#F5F5F8",
-        white: "#FFFFFF"
+        
+        // Secondary UI elements
+        secondary: {
+          DEFAULT: "#7344FF",
+          foreground: "#FFFFFF",
+        },
+        
+        // Muted elements
+        muted: {
+          DEFAULT: "#27272A",
+          foreground: "#A1A1AA",
+        },
+        
+        // Card backgrounds
+        card: {
+          DEFAULT: "#18181B",
+          foreground: "#FFFFFF",
+          border: "#27272A",
+        },
+        
+        // Accent colors
+        accent: {
+          DEFAULT: "#875FFF",
+          foreground: "#FFFFFF",
+        },
+        
+        // Destructive actions
+        destructive: {
+          DEFAULT: "#7F1D1D",
+          foreground: "#FFFFFF",
+        },
+      },
+      borderRadius: {
+        lg: "0.5rem",
+        md: "calc(0.5rem - 2px)",
+        sm: "calc(0.5rem - 4px)",
       },
     },
   },
