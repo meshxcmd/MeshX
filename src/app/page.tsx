@@ -4,16 +4,16 @@ import { Features } from "@/components/features";
 
 export default function Home() {
   return (
-    <>
+    <main className="flex flex-col">
       <div className="container flex min-h-[calc(100vh-3.5rem)] flex-col items-center justify-center">
         <div className="flex flex-col items-center space-y-6 text-center">
           <Image
             src="/mesh-x.svg"
             alt="MeshX Logo"
             width={240}
-            height={64}
+            height={240}
             priority
-            className="mb-2"
+            className="mb-2 h-auto"
           />
           <h1 className="text-6xl font-bold tracking-tight text-foreground">
             MeshX
@@ -36,6 +36,6 @@ export default function Home() {
         </div>
       </div>
       <Features />
-    </>
+    </main>
   );
 }
