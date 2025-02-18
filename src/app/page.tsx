@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="container flex min-h-[calc(100vh-3.5rem)] items-center justify-center">
+    <div className="container flex min-h-[calc(100vh-3.5rem)] flex-col items-center justify-center">
       <div className="flex flex-col items-center space-y-6 text-center">
         <Image
           src="/mesh-x.svg"
@@ -16,11 +17,20 @@ export default function Home() {
           MeshX
         </h1>
         <p className="text-xl text-muted-foreground">
-          An AI Systems Framework
+          Autonomous Agent Mesh Network
         </p>
-        <button className="button mt-4">
-          Get Started
-        </button>
+        <div className="mt-8 flex flex-col items-center space-y-4">
+          <p className="max-w-[42rem] text-center text-muted-foreground">
+            The world&apos;s first framework for creating dynamic, self-organizing networks of AI agents
+            that learn, adapt, and evolve together.
+          </p>
+          <Link 
+            href="/docs" 
+            className="button"
+          >
+            Get Started
+          </Link>
+        </div>
       </div>
     </div>
   );
